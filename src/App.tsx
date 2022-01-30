@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { BrowserRouter, BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Header from './component/Header';
 import Home from './Routes/Home';
 import Search from './Routes/Search';
@@ -10,10 +10,12 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/*" element={<Home />} />
-        <Route path="movies/:movieId" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/movies/:movieId" element={<Home />} />
         <Route path="/tv" element={<Tv />} />
-        <Route path="search" element={<Search />} />
+        <Route path="/tv/:tvId" element={<Tv />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/search/:searchId" element={<Search />} />
       </Routes>
     </Router>
   );

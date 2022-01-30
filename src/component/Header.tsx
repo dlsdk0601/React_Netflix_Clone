@@ -44,7 +44,7 @@ const Header = () => {
     const { register, handleSubmit } = useForm<IForm>();
 
     const onVaild = (data:IForm) => {
-        navigate(`/serch?keyword=${data.keyword}`);
+        navigate(`/search?keyword=${data.keyword}`);
     }
 
     const toggleSearch = () => {
@@ -141,6 +141,7 @@ const Nav = styled(motion.nav)`
     font-size: 14px;
     padding: 20px 60px;
     color: white;
+    z-index: 100;
 `;
 
 const Logo = styled(motion.svg)`

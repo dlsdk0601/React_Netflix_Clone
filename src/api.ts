@@ -30,18 +30,22 @@ export function getTopMovies(){
     return fetch(`${BASE_PATH}/movie/top_rated?api_key=${API_KEY}`).then(res => res.json());
 }
 
-export function getLatesMovies(){
-    return fetch(`${BASE_PATH}/movie/latest?api_key=${API_KEY}`).then(res => res.json());
+export function getUpcomingMovies(){
+    return fetch(`${BASE_PATH}/movie/upcoming?api_key=${API_KEY}`).then(res => res.json());
 }
 
 export function getAiringTv(){
     return fetch(`${BASE_PATH}/tv/airing_today?api_key=${API_KEY}`).then(res => res.json());
 }
 
-export function getLastestTv(){
-    return fetch(`${BASE_PATH}/tv/latest?api_key=${API_KEY}`).then(res => res.json());
+export function getonAirtTv(){
+    return fetch(`${BASE_PATH}/tv/on_the_air?api_key=${API_KEY}`).then(res => res.json());
 }
 
 export function getPopTv(){
     return fetch(`${BASE_PATH}/tv/popular?api_key=${API_KEY}`).then(res => res.json());
+}
+
+export function getSearch(keyword: string){
+    return fetch(`${BASE_PATH}/search/multi?api_key=${API_KEY}&query=${keyword}`).then(res => res.json());
 }
